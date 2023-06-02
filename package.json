@@ -1,0 +1,43 @@
+{
+  "name": "@br88c/logger",
+  "version": "1.0.0",
+  "description": "A logger for Node.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "docs": "rimraf ./docs && typedoc",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "prepublishOnly": "npm i --include=dev && npm run build"
+  },
+  "keywords": [
+    "map"
+  ],
+  "homepage": "https://br88c.github.io/logger",
+  "bugs": {
+    "url": "https://github.com/BR88C/logger/issues"
+  },
+  "license": "Apache-2.0",
+  "author": "BR88C",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BR88C/logger.git"
+  },
+  "devDependencies": {
+    "@br88c/eslint-config": "^1.6.0",
+    "@types/node": "^18.16.16",
+    "eslint": "^8.41.0",
+    "rimraf": "^5.0.1",
+    "typedoc": "^0.24.7",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=18.14.0",
+    "npm": ">=9.3.1"
+  },
+  "private": false,
+  "dependencies": {
+    "@br88c/typed-emitter": "^1.0.0"
+  }
+}
